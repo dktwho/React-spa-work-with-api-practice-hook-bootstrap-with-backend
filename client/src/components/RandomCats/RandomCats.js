@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import NewCat from '../NewCat/NewCat'
+import React, { useEffect, useState, useCallback } from 'react'
+import NewCatButton from '../NewCatButton/NewCatButton'
 
 const RandomCats = () => {
   const [img, setImg] = useState(null)
@@ -13,9 +13,12 @@ const RandomCats = () => {
     fetchCat()
   }, [] )
 
-  const newCatHandler = () => {
+  const newCatHandler = useCallback (() => {
     fetchCat()
-  }
+  }, [])
+
+
+  console.log('random cat')
    return (
     <>
       {img &&  (
@@ -25,8 +28,8 @@ const RandomCats = () => {
         </div>
       </div>
     ) }
-    <button onClick={newCatHandler} type="button" className="btn btn-primary my-2">New Cat</button>
-    <NewCat />
+
+    <NewCatButton newCatHandler={newCatHandler} />
     </>
 
    
