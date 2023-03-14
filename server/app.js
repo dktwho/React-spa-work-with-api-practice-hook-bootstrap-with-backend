@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 
 
-
+// /meme?top=...&bottom=...///
 app.get('/meme', async (req, res) => {
   const response = await fetch(
     `http://apimeme.com/meme?meme=2nd-Term-Obama&top=${req.query.top}&bottom=${req.query.bottom}`
