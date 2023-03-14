@@ -5,7 +5,7 @@ import Albums from '../Album/Albums'
 const SinatraAlbums = () => {
   const [albums, setAlbums] = useState([])
   useEffect(() => {
-    fetch('https://itunes.apple.com/search?entity=album&term=Sinatra&attribute=allArtistTerm&limit=16')
+    fetch('https://itunes.apple.com/search?entity=album&term=Sinatra&attribute=allArtistTerm&limit=6')
     .then(response => response.json())
     .then(({results}) => setAlbums(results))
   }, [])
