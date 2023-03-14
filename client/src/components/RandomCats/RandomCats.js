@@ -7,7 +7,7 @@ const RandomCats = () => {
     .then(response=>response.json())
     .then(data => setImg(data[0].url) )
 
-  }, )
+  }, [] )
   return (
     <>
       {img &&  (

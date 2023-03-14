@@ -6,9 +6,10 @@ import RandomCats from './components/RandomCats/RandomCats';
 function App() {
   return (
     <div className="App">
+      <Meme />
       <NavBar />
       <RandomCats />
-      <Meme />
+
 
     </div>
   );
