@@ -17,8 +17,6 @@ const RandomCats = () => {
     fetchCat()
   }, [])
 
-
-  console.log('random cat')
    return (
     <>
       {img &&  (
