@@ -16,7 +16,6 @@ const OneAlbum = () => {
       .then(({results}) => setInfo(results[0]) )
       setLoader(false)
     }, 1000)
-    
   }, [])
   
 
